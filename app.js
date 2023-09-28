@@ -17,6 +17,6 @@ db.once('open',()=>console.log("databaseconntected"));
 app.use(express.json());
 
 const properyRoutes = require("./routes/propertyRoutes");
-app.use('/api',properyRoutes);
+app.use('/api',properyRoutes); 
 
 app.listen(PORT,()=>console.log("server started"));
