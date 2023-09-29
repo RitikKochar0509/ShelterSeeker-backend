@@ -4,7 +4,7 @@ const express = require('express');
 const app =express();
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 8000;
-mongoose.connect(process.env.DATABASE_URL,
+mongoose.connect('mongodb+srv://ritikkochar2:T0kFC4oBLqwumJFX@shelterseeker.7kjxe02.mongodb.net/?retryWrites=true&w=majority',
 {
     useNewUrlParser:true,
     useUnifiedTopology:true
