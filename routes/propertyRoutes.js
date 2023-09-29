@@ -25,15 +25,15 @@ router.get('/property/:id', getProperty, (req,res)=>{
 //Creating one
 router.post('/property',async (req,res)=>{
     const properyData = new Properties({
-        type: req.body.type,
-        name: req.body.name,
-        description: req.body.description,
-        surfaceArea: req.body.surfaceArea,
-        phone: req.body.phone,
-        building: req.body.building,
-        level: req.body.level,
-        location: req.body.location,
-        price: req.body.price,
+        image: req.body.image,
+        propertyName: req.body.propertyName,
+        propertyRent: req.body.propertyRent,
+        propertyLocation: req.body.propertyLocation,
+        propertyDescription: req.body.propertyDescription,
+        proertyAvailability: req.body.proertyAvailability,
+        ownerName: req.body.ownerName,
+        ownerContact: req.body.ownerContact,
+        ownerEmail: req.body.ownerEmail,
     })
 
     try{
@@ -47,32 +47,32 @@ router.post('/property',async (req,res)=>{
 
 //updating one
 router.patch('/property/:id',getProperty,async(req,res)=>{
-    if(req.body.type!=null){
-        res.property.type = req.body.type;
+    if(req.body.image!=null){
+        res.property.image = req.body.image;
     }
-    if(req.body.name!=null){
-        res.property.name = req.body.name;
+    if(req.body.propertyName!=null){
+        res.property.propertyName = req.body.propertyName;
     }
-    if(req.body.description!=null){
-        res.property.description = req.body.description;
+    if(req.body.propertyRent!=null){
+        res.property.propertyRent = req.body.propertyRent;
     }
-    if(req.body.surfaceArea!=null){
-        res.property.surfaceArea = req.body.surfaceArea;
+    if(req.body.propertyLocation!=null){
+        res.property.propertyLocation = req.body.propertyLocation;
     }
-    if(req.body.phone!=null){
-        res.property.phone = req.body.phone;
+    if(req.body.propertyDescription!=null){
+        res.property.propertyDescription = req.body.propertyDescription;
     }
-    if(req.body.building!=null){
-        res.property.building = req.body.building;
+    if(req.body.proertyAvailability!=null){
+        res.property.proertyAvailability = req.body.proertyAvailability;
     }
-    if(req.body.level!=null){
-        res.property.level = req.body.level;
+    if(req.body.ownerName!=null){
+        res.property.ownerName = req.body.ownerName;
     }
-    if(req.body.location!=null){
-        res.property.location = req.body.location;
+    if(req.body.ownerContact!=null){
+        res.property.ownerContact = req.body.ownerContact;
     }
-    if(req.body.price!=null){
-        res.property.price = req.body.price;
+    if(req.body.ownerEmail!=null){
+        res.property.ownerEmail = req.body.ownerEmail;
     }
     try{
         const updatedProperty = await res.property.save();

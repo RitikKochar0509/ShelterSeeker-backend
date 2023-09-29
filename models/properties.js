@@ -1,42 +1,43 @@
 const mongoose = require('mongoose');
 
 const PropertySchema = new mongoose.Schema({
-    type: {
-        type: String,
-        require:true,
-     },
-    name: {
-       type: String,
-       require:true,
-    },
+    image:{
+      type:String,
+      require:true,
 
-    description:  {
-       type: String,
-       require:true,
     },
-    surfaceArea:  {
-        type: String,
-        require:true,
-     },
-    phone:  {
-        type: String,
-        require:true,
-     },
-    building:  {
-        type: String,
-     },
-    level:  {
-        type: String,
-        require:true,
-     },
-    location:  {
-        type: String,
-        require:true,
-     },
-    price:  {
-        type: Number,
-        require:true,
-     },
+    propertyName:{
+      type:String,
+      require:true,
+    },
+    propertyRent:{
+      type:String,
+      require:true
+    },
+    propertyLocation:{
+      type:String,
+      require:true,
+    },
+    propertyDescription:{
+      type:String,
+      require:true
+    },
+    proertyAvailability:{
+      type:Date,
+      require:true
+    },
+    ownerName:{
+      type:String,
+      require:true
+    },
+    ownerContact:{
+      type:Number,
+      require:true
+    },
+    ownerEmail:{
+      type:String,
+      require:true
+    }
     
 })
 
