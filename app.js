@@ -24,4 +24,8 @@ app.use(express.json());
 const properyRoutes = require("./routes/propertyRoutes");
 app.use('/api', properyRoutes);
 
-app.listen(PORT, () => console.log("server started"));
+const useRoutes = require("./routes/userRoutes");
+app.use('/api',useRoutes);
+
+
+app.listen(PORT, () => console.log(`server started on port ${PORT}`));
